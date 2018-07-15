@@ -10,7 +10,7 @@
 
 ### 3.使用Dagger2来解耦,解耦,解耦,重要的事情说三遍!
 
-    
+    ### 注入
     @PerComponentScope
     @Component(dependencies = arrayOf(ActivityComponent::class),modules = arrayOf(UserModule::class))
     interface UserComponent {
@@ -20,7 +20,7 @@
         fun inject(activity: ResetPwdActivity)
     }
     
-    ### Activity自动初始化
+    ### Activity
     override fun injectComponent() {
         DaggerUserComponent.builder().activityComponent(activityComponent).userModule(UserModule()).build().inject(this)
         mPresenter.mView = this
