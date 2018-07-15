@@ -9,7 +9,9 @@
 ### 2.使用ARouter跨模块页面跳转,模块间解耦,拦截跳转过程,处理登陆、埋点等逻辑,跨模块API调用,通过控制反转来做组件解耦
 
 ### 3.使用Dagger2来解耦,解耦,解耦,重要的事情说三遍!
-    ```java
+
+
+    ```Java
     @PerComponentScope
     @Component(dependencies = arrayOf(ActivityComponent::class),modules = arrayOf(UserModule::class))
     interface UserComponent {
@@ -27,7 +29,8 @@
     ```
 
 ### 使用anko框架 让你的代码简洁到极致
-    ```java
+
+    ```Java
     toast("hello anko")
     
     startActivity<ResetPwdActivity>("mobile" to mMobileEt.text.toString())
