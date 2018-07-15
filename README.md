@@ -11,7 +11,7 @@
 ### 3.使用Dagger2来解耦,解耦,解耦,重要的事情说三遍!
 
 
-    ```Java
+    ``` Java
     @PerComponentScope
     @Component(dependencies = arrayOf(ActivityComponent::class),modules = arrayOf(UserModule::class))
     interface UserComponent {
@@ -30,7 +30,7 @@
 
 ### 使用anko框架 让你的代码简洁到极致
 
-    ```Java
+    ``` Java
     toast("hello anko")
     
     startActivity<ResetPwdActivity>("mobile" to mMobileEt.text.toString())
